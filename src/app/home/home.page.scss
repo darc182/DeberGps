@@ -1,27 +1,139 @@
-#container {
+/* Estilos generales */
+ion-content {
+  --background: #f5f5f5;
+}
+
+/* Estilo para el toolbar/header */
+ion-toolbar {
+  --background: #3880ff;
+  --color: white;
+}
+
+/* Estilo para la tarjeta de coordenadas */
+ion-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+  --background: white;
+}
+
+ion-card-header {
+  padding-bottom: 0;
+}
+
+ion-card-title {
+  color: #3880ff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+ion-card-content {
+  padding-top: 8px;
+}
+
+/* Estilo para los textos de coordenadas */
+ion-card-content p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+ion-card-content strong {
+  color: #3880ff;
+}
+
+/* Estilo para el input */
+ion-item {
+  --border-color: #ddd;
+  --border-radius: 8px;
+  --highlight-color-focused: #3880ff;
+  margin-bottom: 20px;
+}
+
+ion-label[position="floating"] {
+  color: #666;
+}
+
+ion-input {
+  --padding-start: 8px;
+  --padding-end: 8px;
+}
+
+/* Estilo para los botones */
+ion-button {
+  --border-radius: 8px;
+  --box-shadow: 0 2px 6px rgba(56, 128, 255, 0.3);
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  margin-top: 12px;
+}
+
+ion-button[expand="block"] {
+  --background: #3880ff;
+  --background-activated: #2a68d6;
+  --background-hover: #4d8cff;
+}
+
+ion-button[disabled] {
+  --background: #cccccc;
+  --background-activated: #cccccc;
+  --background-hover: #cccccc;
+  --box-shadow: none;
+}
+
+/* Estilo para el mensaje de carga */
+div:empty + div {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 40px;
+  color: #666;
+  font-size: 1.2rem;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/* Estilo para los iconos */
+ion-icon {
+  font-size: 1.2em;
+  margin-right: 8px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+/* Efectos hover para mejor interactividad */
+ion-button:not([disabled]):hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
 }
 
-#container a {
-  text-decoration: none;
+ion-item:hover {
+  --border-color: #3880ff;
+  transition: border-color 0.3s ease;
+}
+
+
+
+/* Input con efecto de focus mejorado */
+ion-item.item-has-focus {
+  --border-color: #3880ff;
+  ion-label {
+    color: #3880ff !important;
+  }
+}
+
+.loading-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+  
+  ion-spinner {
+    width: 48px;
+    height: 48px;
+    --color: #3880ff;
+    margin-bottom: 16px;
+  }
+  
+  p {
+    color: #3880ff;
+    font-size: 1.2rem;
+    margin-top: 16px;
+  }
 }

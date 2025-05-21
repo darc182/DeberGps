@@ -13,14 +13,27 @@
       <ion-card-content>
         <p><strong>Latitud:</strong> {{ latitude }}</p>
         <p><strong>Longitud:</strong> {{ longitude }}</p>
-        <ion-button expand="block" (click)="openGoogleMaps()">
+        
+        <ion-item>
+          <ion-label position="floating">Tu nombre</ion-label>
+          <ion-input [(ngModel)]="userName"></ion-input>
+        </ion-item>
+        
+        <ion-button expand="block" (click)="openGoogleMaps()" class="ion-margin-top">
           <ion-icon name="map" slot="start"></ion-icon>
           Ver en Google Maps
+        </ion-button>
+        
+        <ion-button expand="block" (click)="saveLocation()" [disabled]="!userName">
+          <ion-icon name="save" slot="start"></ion-icon>
+          Guardar ubicación
         </ion-button>
       </ion-card-content>
     </ion-card>
   </div>
 
-  <div *ngIf="latitude === null && longitude === null">
-    <p>Obteniendo ubicación...</p>
-  </div>
+  <div *ngIf="latitude === null && longitude === null" class="loading-message">
+  <ion-spinner name="crescent"></ion-spinner>
+  <p>Obteniendo tu ubicación...</p>
+</div>
+</ion-content>
