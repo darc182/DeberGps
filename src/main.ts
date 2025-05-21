@@ -8,21 +8,12 @@ import { importProvidersFrom } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
 const firebaseConfig = {
-
-  apiKey: "AIzaSyApmLZbwwzkWHaMefftXLnoeCrtrqWwe38",
-
-  authDomain: "demomovil-856fc.firebaseapp.com",
-
-  projectId: "demomovil-856fc",
-
-  storageBucket: "demomovil-856fc.firebasestorage.app",
-
-  messagingSenderId: "125390567669",
-
-  appId: "1:125390567669:web:67fb426273259005912dbc",
-
-  measurementId: "G-MQPGFC6F7B"
-
+  apiKey: "TU_API_KEY",
+  authDomain: "TU_PROYECTO.firebaseapp.com",
+  projectId: "TU_PROYECTO",
+  storageBucket: "TU_PROYECTO.appspot.com",
+  messagingSenderId: "TU_SENDER_ID",
+  appId: "TU_APP_ID"
 };
 
 
